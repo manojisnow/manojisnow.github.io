@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manoj Kumar Udaya Kumar | Senior Java Developer & Technical Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #e8ecf0;
+      color: #222;
+      min-height: 100vh;
+      padding: 48px 16px;
+    }
+
+    .card {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 4px;
+      padding: 56px 64px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      border-radius: 6px;
+      background: #1F3864;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 1px;
+    }
+
+    .header-info h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #111;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .header-info .title {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .header-info .contact {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .header-info .contact a {
+      color: #777;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .header-info .contact a:hover { color: #1F3864; border-color: #1F3864; }
+    .header-info .contact .sep { margin: 0 6px; }
+
+    .summary {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #444;
+      margin-top: 14px;
+    }
+
+    /* ── Key Achievements bar ── */
+    .achievements {
+      margin-top: 20px;
+      background: #f4f6f9;
+      border-left: 3px solid #1F3864;
+      padding: 12px 16px;
+      border-radius: 0 4px 4px 0;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .achievements strong {
+      color: #1F3864;
+      font-weight: 600;
+    }
+
+    /* ── Sections ── */
+    .section { margin-top: 36px; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* ── Skills grid ── */
+    .skills-grid { display: flex; flex-direction: column; gap: 8px; }
+
+    .skill-row {
+      display: flex;
+      gap: 8px;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    .skill-label {
+      font-weight: 600;
+      color: #333;
+      min-width: 210px;
+      flex-shrink: 0;
+    }
+
+    .skill-value { color: #555; }
+
+    /* ── Job entries ── */
+    .job { margin-bottom: 28px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 2px;
+    }
+
+    .company {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #111;
+    }
+
+    .dates {
+      font-size: 12.5px;
+      color: #888;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    .role-line {
+      font-size: 13.5px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .context {
+      font-size: 13px;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .bullets li {
+      font-size: 13.5px;
+      color: #333;
+      line-height: 1.6;
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+
+    .bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #1F3864;
+      font-weight: 700;
+    }
+
+    .tech-line {
+      margin-top: 10px;
+      font-size: 12.5px;
+      color: #888;
+    }
+
+    .tech-line strong { font-weight: 600; color: #666; }
+
+    /* ── Projects ── */
+    .project { margin-bottom: 18px; }
+
+    .project-name {
+      font-weight: 700;
+      color: #1F3864;
+      font-size: 14px;
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: #444;
+      line-height: 1.6;
+      margin-top: 3px;
+    }
+
+    .project-link {
+      font-size: 12.5px;
+      color: #888;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .project-link:hover { color: #1F3864; border-color: #1F3864; }
+
+    /* ── Education ── */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .degree {
+      font-size: 14px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .school {
+      font-size: 13px;
+      color: #666;
+      margin-top: 3px;
+    }
+
+    /* ── Additional ── */
+    .additional-row {
+      font-size: 13.5px;
+      color: #444;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .additional-row strong { color: #333; font-weight: 600; }
+
+    /* ── Print / PDF ── */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .card { box-shadow: none; padding: 40px 48px; max-width: 100%; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="avatar">MK</div>
+    <div class="header-info">
+      <h1>Manoj Kumar Udaya Kumar</h1>
+      <div class="title">Senior Java Developer &amp; Technical Leader</div>
+      <div class="contact">
+        <a href="mailto:umanojkumarit@gmail.com">umanojkumarit@gmail.com</a>
+        <span class="sep">|</span>
+        +353 89 429 1952
+        <span class="sep">|</span>
+        <a href="https://linkedin.com/in/manoj-kumar-49251b15" target="_blank">LinkedIn</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/manojisnow" target="_blank">github.com/manojisnow</a>
+      </div>
+      <div class="contact" style="margin-top:4px;">
+        Authorised to work in Ireland &amp; EU
+      </div>
+
+      <p class="summary">
+        Senior Java Engineer and Technical Lead with 15+ years of experience designing and delivering
+        high-performance, globally distributed enterprise systems across financial services,
+        telecommunications, and e-learning sectors. Deep expertise in building transaction-intensive
+        microservices architectures with Java, Spring Boot, Kafka, and cloud-native platforms. Proven
+        track record of driving architectural direction, migrating legacy systems to cloud-native
+        deployments, and leading cross-functional engineering teams. Creator of multiple open-source
+        tools focused on security automation, AI integration, and frontend language design.
+      </p>
+
+      <div class="achievements">
+        <strong>Key Achievements: </strong>
+        Reduced codebase size by 50% &nbsp;•&nbsp;
+        Improved memory efficiency by 40% &nbsp;•&nbsp;
+        Led migrations handling 200M+ database records &nbsp;•&nbsp;
+        Integrated security tooling reducing vulnerabilities by 90% &nbsp;•&nbsp;
+        Open-source tools with 155–255+ Docker pulls within weeks of launch
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="section">
+    <div class="section-label">Core Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Languages &amp; Frameworks</span>
+        <span class="skill-value">Java 8–17, Python, Spring Boot, Spring Framework, REST APIs, Microservices Architecture, Kafka / Event-Driven Architecture</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Cloud &amp; DevOps</span>
+        <span class="skill-value">Azure Functions, AWS (Aurora, EC2, S3), Docker, Kubernetes, Helm Charts, CI/CD Pipelines (Jenkins), SonarQube</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Databases</span>
+        <span class="skill-value">Oracle, MySQL, PostgreSQL, AWS Aurora, NDB Cluster, SQL Server</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Security &amp; Testing</span>
+        <span class="skill-value">DevSecOps, Trivy, Grype, Kubescape, Gitleaks, Semgrep, JUnit, Karate Framework, Integration Testing</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="section">
+    <div class="section-label">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="company">Fidelity Investments</span>
+        <span class="dates">November 2024 – Present</span>
+      </div>
+      <div class="role-line">Senior Software Engineer (Contractor) | Galway</div>
+      <p class="context">Architecting cloud-native workplace investment solutions on Azure for high-availability financial services delivery, collaborating with infrastructure, SRE, and product teams.</p>
+      <ul class="bullets">
+        <li>Re-engineered batch-based legacy report generation to serverless, event-driven Azure Functions, eliminating processing bottlenecks and enabling parallel execution across financial workflows</li>
+        <li>Optimised codebase by 50% through refactoring, eliminating duplication, and implementing reusable components across a large Java/Spring Boot platform</li>
+        <li>Enhanced integration test suites using Karate framework, improving test reliability and coverage across financial transaction workflows</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> Java, Spring Boot, Azure Functions, Azure Cloud Services, Karate Testing Framework, SonarQube</div>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="company">Ericsson</span>
+        <span class="dates">October 2022 – October 2024</span>
+      </div>
+      <div class="role-line">Senior Software Engineer | Athlone</div>
+      <p class="context">Drove cloud migration for high-volume telecommunications systems, containerising bare-metal applications and integrating security tooling into CI/CD pipelines across globally distributed infrastructure.</p>
+      <ul class="bullets">
+        <li>Integrated security scanning tools (Trivy, Grype, Kubeaudit) into CI/CD pipeline, reducing security vulnerabilities by 90% across production deployments</li>
+        <li>Improved application performance by 40% through memory optimisation, JVM tuning, and profiling on high-throughput telecommunications services</li>
+        <li>Reduced software upgrade time by 50% by decoupling hard dependencies and streamlining container-based deployment processes</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> Java, Docker, Kubernetes, Helm, Spring Framework, DevSecOps Tools, CI/CD</div>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="company">Velocix Solutions</span>
+        <span class="dates">September 2021 – October 2022</span>
+      </div>
+      <div class="role-line">Product Development Manager | Chennai</div>
+      <p class="context">Led cloud migration and architecture initiatives for enterprise content delivery systems, including the largest database migration in company history.</p>
+      <ul class="bullets">
+        <li>Orchestrated migration of 200M+ database records from MySQL NDB Cluster to AWS Aurora with zero downtime using a phased CDC approach</li>
+        <li>Designed application architecture ensuring 99.9% uptime for high-availability systems serving enterprise clients globally</li>
+        <li>Drove cybersecurity compliance and delivered executive stakeholder reporting across a multi-phase, multi-team migration programme</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> Java, AWS (Aurora, EC2, S3), MySQL, Oracle, System Architecture, Cloud Migration</div>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="company">Equiniti India Private Limited</span>
+        <span class="dates">November 2016 – September 2021</span>
+      </div>
+      <div class="role-line">Software Development Team Leader | Chennai</div>
+      <p class="context">Led cross-functional development teams delivering high-availability solutions for mission-critical financial applications in a regulated environment.</p>
+      <ul class="bullets">
+        <li>Mentored a team of 8+ developers, conducting performance reviews, establishing development plans, and driving measurable technical growth</li>
+        <li>Managed complete SDLC across multiple concurrent projects, implementing process improvements that reduced delivery time by 30%</li>
+        <li>Collaborated with Product Management to establish and deliver roadmaps aligned with regulatory and business requirements</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> Java, Spring Framework, Oracle, SQL Server, Financial Systems Integration</div>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="company">LNT Infotech</span>
+        <span class="dates">July 2015 – October 2016</span>
+      </div>
+      <div class="role-line">Senior Software Engineer</div>
+      <p class="context">Developed the Price Optimizer suite using big data analytics and machine learning for real-time price forecasting across retail clients.</p>
+      <ul class="bullets">
+        <li>Designed and implemented AI-driven pricing algorithms for the Price Optimizer suite, enabling real-time price forecasting and reducing manual pricing decisions for retail clients</li>
+        <li>Automated testing scenarios using Python, Sikuli, and Robot Framework, reducing manual testing effort by 70%</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> Java, Python, Big Data Analytics, Machine Learning, Robot Framework, Statistical Analysis</div>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="company">Cognizant Technology Solutions</span>
+        <span class="dates">June 2010 – July 2015</span>
+      </div>
+      <div class="role-line">Associate Software Engineer</div>
+      <p class="context">Collaborated in agile teams building enterprise-grade Java platforms for HMH (Houghton Mifflin Harcourt), a global e-learning publisher, including DLM and WriteSource (LMS platforms) and HMOF.</p>
+      <ul class="bullets">
+        <li>Built and maintained core modules across three e-learning platforms (DLM, WriteSource, HMOF), delivering BI dashboards and automated reports used in stakeholder decision-making across global client operations</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> Java, SQL, Business Intelligence Tools, Enterprise Application Development</div>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="section">
+    <div class="section-label">Key Projects</div>
+
+    <div class="project">
+      <span class="project-name">Laria</span>
+      <p class="project-desc">Security orchestration platform integrating 10+ scanning tools (Trivy, Gitleaks, Semgrep, Kubescape) into a unified CI/CD pipeline with SBOM generation. 155+ Docker Hub pulls since launch.</p>
+      <a class="project-link" href="https://github.com/manojisnow/laria" target="_blank">github.com/manojisnow/laria</a>
+    </div>
+
+    <div class="project">
+      <span class="project-name">Boox</span>
+      <p class="project-desc">Full-stack local AI chatbot with Spring Boot, React, and Ollama; real-time SSE streaming and extensible tool-calling framework with DuckDuckGo web search. 255+ Docker Hub pulls since launch.</p>
+      <a class="project-link" href="https://github.com/manojisnow/boox" target="_blank">github.com/manojisnow/boox</a>
+    </div>
+
+    <div class="project">
+      <span class="project-name">Tela</span>
+      <p class="project-desc">Designed and published a declarative single-file component language to npm that compiles to vanilla JS/CSS with zero dependencies. 434 downloads in first 3 weeks after launch (March 2026). Includes a Maven plugin for Spring Boot integration.</p>
+      <a class="project-link" href="https://github.com/tela-lang/tela" target="_blank">github.com/tela-lang/tela</a>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-label">Education</div>
+    <div class="edu-header">
+      <div>
+        <div class="degree">Bachelor of Technology – Information Technology</div>
+        <div class="school">Alpha College of Engineering, Anna University, Chennai</div>
+      </div>
+      <span class="dates">2006 – 2010</span>
+    </div>
+  </div>
+
+  <!-- Additional -->
+  <div class="section">
+    <div class="section-label">Additional Information</div>
+    <div class="additional-row"><strong>Work Authorisation:</strong> Authorised to work in Ireland and EU</div>
+    <div class="additional-row"><strong>Continuous Learning:</strong> Currently deepening expertise in AI/ML integration patterns, event-driven architecture with Kafka, and advanced cloud-native systems design</div>
+  </div>
+
+</div>
+</body>
+</html>
